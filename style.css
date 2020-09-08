@@ -1,0 +1,655 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merienda One', cursive;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    position: relative;
+    height: auto;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.sec1 {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(img/img1.jfif);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.sec1 .fa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 700px;
+    right: 40px;
+    height: 50px;
+    width: 50px;
+    background: red;
+    border-radius: 50%;
+    color: #fff;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, .5);
+    background-position: center;
+    background-repeat: no-repeat;
+    visibility: hidden;
+    opacity: 0;
+    font-size: 3rem;
+    cursor: pointer;
+    transition: .3s;
+    z-index: 3000;
+
+
+}
+
+.sec1 .fa.active {
+    visibility: visible;
+    opacity: 1;
+    bottom: 40px;
+}
+
+.bg {
+    position: fixed;
+    top: 0;
+    left: -140%;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: skew(-20deg);
+    transition: .5s;
+    box-shadow: 0 0 20rem #000;
+}
+
+.bg.active {
+    left: -40%;
+}
+
+.bg .navigation {
+    position: relative;
+    transform: translateX(13rem) translateY(-5rem);
+}
+
+.bg .navigation ul {
+    list-style-type: none;
+}
+
+.bg .navigation ul li {
+    position: relative;
+    margin: 3rem 0;
+    transition: .5s;
+}
+
+.bg .navigation ul li a {
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    font-size: 3rem;
+    text-transform: uppercase;
+    transition: .5s;
+}
+
+.bg .navigation ul li a:hover {
+    color: rgb(102, 89, 216);
+    transform: translateX(4rem);
+}
+
+.bg .navigation ul li:hover {
+    transform: translateX(4rem);
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    width: 80%;
+    margin: 2rem auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 200;
+    background: transparent;
+    transition: .5s;
+}
+
+.nav.sticky {
+    background: #8c7ae6;
+    padding: 2rem;
+    box-shadow: 1rem 1rem 3rem #000;
+}
+
+.nav h2 {
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: .2rem;
+}
+
+.nav .navBar ul {
+    display: flex;
+}
+
+.nav .navBar ul li {
+    list-style: none;
+    margin: 0 2rem;
+}
+
+.nav .navBar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.6rem;
+}
+
+.nav .menu {
+    width: 6rem;
+    height: 6rem;
+    display: none;
+    cursor: pointer;
+    background: url(https://img.icons8.com/nolan/50/menu.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: .3s;
+}
+
+.nav .menu.active {
+    background: url(https://img.icons8.com/ultraviolet/40/000000/close-window.png);
+    width: 5rem;
+    height: 5rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.context {
+    position: absolute;
+    left: 10%;
+    color: #fff;
+    max-width: 60rem;
+}
+
+.context h2 {
+    font-size: 5rem;
+    margin: 0;
+}
+
+.context h1 {
+    font-size: 8rem;
+    margin: 0;
+    padding: 0;
+}
+
+.context h4 {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+.context a {
+    background: rgb(72, 117, 241);
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    font-weight: 700;
+}
+
+/* /about us section/ */
+.sec2 {
+    position: relative;
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    background: rgb(214, 213, 213);
+    overflow: hidden;
+    overflow-x: hidden;
+    padding: 4rem;
+
+}
+
+.sec2 .head {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 4rem;
+    color: rgb(72, 117, 241);
+    box-shadow: 0 .5rem 1rem #777;
+    padding: 2rem;
+    background: #fff;
+}
+
+.sec2 .container {
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: rgb(230, 230, 230);
+    flex-wrap: wrap;
+    padding: 2rem;
+    margin-top: 5rem;
+}
+
+.sec2 .container .content {
+    max-width: 45%;
+    height: 40rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    background: #fff;
+    padding: 2rem;
+    margin: 2rem;
+}
+
+.sec2 .container .image1 {
+    max-width: 50%;
+    height: 40rem;
+}
+
+.sec2 .container .image1 img {
+    max-width: 100%;
+    height: 100%;
+}
+
+.sec2 .container .content h2 {
+    font-size: 3rem;
+}
+
+.sec2 .container .content p {
+    font-size: 1.5rem;
+}
+
+.sec2 .container .content p {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* /about us section finished/
+
+/----our services section-----/ */
+.sec3 {
+    position: relative;
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    background: #000;
+    overflow: hidden;
+    padding: 10rem;
+}
+
+.sec3 .head {
+    color: #fff;
+    font-size: 4rem;
+    text-transform: uppercase;
+}
+
+.sec3 .info {
+    color: #fff;
+    font-size: 1.4rem;
+}
+
+.sec3 .container {
+    position: relative;
+    height: auto;
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(40rem, 1fr));
+    grid-template-rows: minmax(10rem, auto);
+    margin: 3rem;
+    grid-auto-flow: dense;
+    grid-gap: 1rem;
+}
+
+.sec3 .container .box {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    color: #fff;
+    background: #333;
+    padding: 2rem;
+    transition: .5s;
+}
+
+.sec3 .container .box:hover {
+    background: rgb(72, 117, 241);
+}
+
+.sec3 .container .box img {
+    filter: invert(1);
+    width: 7rem;
+}
+
+.sec3 .container .box h2 {
+    margin: 1rem 0;
+}
+
+/* /----!our services section-----/
+
+
+
+/----our latest work section-----/ */
+.sec4 {
+    position: relative;
+    height: auto;
+    width: 100%;
+    padding: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.sec4 .head {
+    color: rgb(72, 117, 241);
+    font-size: 5rem;
+    text-transform: uppercase;
+}
+
+.sec4 .info {
+    font-size: 1.5rem;
+}
+
+.sec4 .container {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(50rem, 1fr));
+    grid-template-rows: minmax(40rem, auto);
+    margin: 4rem;
+    grid-auto-flow: dense;
+    grid-gap: 2rem;
+    margin-top: 5rem;
+}
+
+.sec4 .container .box {
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+.sec4 .container .box img {
+    width: 100%;
+    transform: scale(1.2);
+    transition: .5s;
+}
+
+.sec4 .container .box:hover img {
+    transform: scale(1);
+}
+
+/* /----!our latest work section-----/
+
+/-------our testimonial section---------/ */
+.sec5 {
+    position: relative;
+    height: auto;
+    width: 100%;
+    padding: 8rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    background: rgb(238, 238, 238);
+    overflow: hidden;
+}
+
+.sec5 .container {
+    position: relative;
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 5rem;
+    flex-wrap: wrap;
+}
+
+.sec5 .head {
+    font-size: 5rem;
+    text-transform: uppercase;
+    color: rgb(72, 117, 241);
+}
+
+.sec5 .info {
+    font-size: 1.5rem;
+}
+
+.sec5 .container .box {
+    max-width: 45%;
+    margin: 2rem;
+    padding: 3rem 2rem;
+    background: rgb(72, 117, 241);
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+.sec5 .container .box .lower {
+    width: 100%;
+    text-align: right;
+    margin-top: 3rem;
+}
+
+/* /-------our testimonial section---------/
+
+
+/------contact Me section-----------/ */
+.sec6 {
+    position: relative;
+    height: auto;
+    width: 100%;
+    padding: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #000;
+}
+
+.sec6 .head {
+    color: #fff;
+    font-size: 5rem;
+}
+
+.sec6 .info {
+    color: #fff;
+    font-size: 1.4rem;
+}
+
+.sec6 .container {
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.sec6 .container .box {
+    max-width: 50%;
+    margin: 2rem;
+    color: #fff;
+}
+
+.sec6 .container .box1 h2 {
+    font-size: 2rem;
+}
+
+.sec6 .container .box1 .book {
+    margin: 2rem 0;
+}
+
+.sec6 .container .box1 .book .page1 i {
+    color: rgb(126, 158, 247);
+    font-size: 2rem;
+    margin-right: 1rem;
+}
+
+.sec6 .container .box1 .book .page1 span {
+    font-size: 2rem;
+}
+
+.sec6 .container .box1 .book .page2 {
+    text-align: center;
+}
+
+.sec6 .container .box2 {
+    width: 60rem;
+}
+
+.sec6 .container .box2 form {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.sec6 .container .box2 form input {
+    width: 100%;
+    height: 3rem;
+    border: none;
+    outline: none;
+    background: none;
+    background: #333;
+    margin: 1rem;
+    text-align: center;
+    color: #777;
+}
+
+.sec6 .container .box2 form .message {
+    height: 10rem;
+}
+
+.sec6 .container .box2 form button {
+    background: none;
+    outline: none;
+    border: none;
+    background: rgb(95, 121, 238);
+    color: #fff;
+    padding: 2rem 3rem;
+}
+
+.sec6 .container .box2 form h2 {
+    font-size: 2rem;
+}
+
+/* /------!contact Me section-----------/
+
+
+
+/-----media query works here------/ */
+@media(max-width:991px) {
+    html {
+        font-size: 55%;
+    }
+
+    .sec2 .container .content {
+        max-width: 80%;
+    }
+
+    .sec2 .container .image1 {
+        max-width: 100%;
+    }
+
+    .sec5 .container .box {
+        max-width: 80%;
+    }
+
+    .sec3 .container {
+        grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+        grid-template-rows: minmax(auto, auto);
+    }
+
+    .sec4 .container {
+        grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+        grid-template-rows: minmax(auto, auto);
+    }
+
+    .sec2 .container .content {
+        margin: 2rem 0;
+        max-width: 50%;
+    }
+}
+
+@media(max-width:768px) {
+    html {
+        font-size: 45%;
+    }
+}
+
+@media(max-width:650px) {
+    html {
+        font-size: 45%;
+    }
+
+    .nav .menu {
+        display: inline-block;
+    }
+
+    .nav .navBar ul {
+        display: none;
+    }
+
+    .sec6 .container {
+        flex-direction: column;
+    }
+
+    .sec6 .container .box {
+        max-width: 100%;
+    }
+
+    .sec2 .container .content {
+        max-width: 100%;
+    }
+
+    .sec5 .container {
+        width: 100%;
+    }
+
+    .sec4 .head {
+        font-size: 4rem;
+    }
+
+    .sec2 .container {
+        width: 100%;
+    }
+
+    .sec2 .container .content {
+        margin: 2rem 0;
+    }
+
+    .sec5 {
+        padding: 2rem;
+    }
+
+    .sec4 .head {
+        font-size: 3.5rem;
+    }
+
+    .nav.sticky {
+        width: 95%;
+    }
+
+    .sec3 {
+        padding: 1rem;
+    }
+}
