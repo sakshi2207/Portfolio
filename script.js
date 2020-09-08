@@ -24,3 +24,14 @@ function scrollToTop() {
         behavior: 'smooth'
     })
 }
+function sendEmail() {
+    Email.send({
+        SecureToken: "b65dec8c-52df-43b3-afb3-77058ec797ae",
+        To: 'maliksakshi248@gmail.com',
+        From: document.getElementsByClassName("email")[0].textContent,
+        Subject: "Website email",
+        Body: document.getElementsByClassName("message")[0].textContent,
+    }).then(
+        message => alert("Message Send")
+    );
+}
