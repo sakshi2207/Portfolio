@@ -26,7 +26,7 @@ function scrollToTop() {
 }
 function sendEmail() {
     Email.send({
-        SecureToken: "b65dec8c-52df-43b3-afb3-77058ec797ae",
+        SecureToken: "xxx",
         To: 'maliksakshi248@gmail.com',
         From: document.getElementsByClassName("email")[0].textContent,
         Subject: "Website email",
