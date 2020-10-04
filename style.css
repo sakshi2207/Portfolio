@@ -118,7 +118,7 @@ body {
 .nav {
     position: fixed;
     top: 0;
-    width: 80%;
+    width: 85%;
     margin: 2rem auto;
     display: flex;
     justify-content: space-between;
