@@ -6,7 +6,7 @@
 }
 
 html {
-    font-size: 62.5%;
+    font-size: 70.5%;
     scroll-behavior: smooth;
 }
 
@@ -25,10 +25,11 @@ body {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(img/img1.jfif);
+    background: linear-gradient(rgba(0, 0, 0, .9), rgba(0, 0, 0, .10)), url(img/img1.jfif);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
 }
 
 .sec1 .fa {
@@ -52,8 +53,6 @@ body {
     cursor: pointer;
     transition: .3s;
     z-index: 3000;
-
-
 }
 
 .sec1 .fa.active {
@@ -176,7 +175,24 @@ body {
     background-repeat: no-repeat;
     background-position: center;
 }
+#cursor{
+    animation: ani1 .7s ease infinite;
+    text-align: center;
+    
+}
+@keyframes ani1{
+   0%{
+       opacity: 1;
 
+   } 
+   50%{
+       opacity: .1;
+
+   }
+   100%{
+       opacity: 1;
+   }
+}
 .context {
     position: absolute;
     left: 10%;
@@ -195,8 +211,7 @@ body {
     padding: 0;
 }
 
-.context h4 {
-    font-size: 2rem;
+.context h2{
     margin-bottom: 3rem;
 }
 
@@ -270,10 +285,6 @@ body {
 
 .sec2 .container .content h2 {
     font-size: 3rem;
-}
-
-.sec2 .container .content p {
-    font-size: 1.5rem;
 }
 
 .sec2 .container .content p {
@@ -400,7 +411,7 @@ body {
 
 /* /----!our latest work section-----/
 
-/-------our testimonial section---------/ */
+/-------our education section---------/ */
 .sec5 {
     position: relative;
     height: auto;
@@ -449,7 +460,7 @@ body {
     margin-top: 3rem;
 }
 
-/* /-------our testimonial section---------/
+/* /-------our education section---------/
 
 
 /------contact Me section-----------/ */
@@ -528,7 +539,6 @@ body {
     height: 3rem;
     border: none;
     outline: none;
-    background: none;
     background: #333;
     margin: 1rem;
     text-align: center;
@@ -540,7 +550,6 @@ body {
 }
 
 .sec6 .container .box2 form button {
-    background: none;
     outline: none;
     border: none;
     background: rgb(95, 121, 238);
@@ -551,7 +560,32 @@ body {
 .sec6 .container .box2 form h2 {
     font-size: 2rem;
 }
-
+.social ul {
+    position: absolute;
+    left: 40%;
+    top: 70%;
+  }
+  
+.social li {
+    text-decoration: none;
+    display: inline;
+    font-size: 2rem;
+    text-align: center;
+    display: inline-block;
+    transition: background-color 4s ease-in-out, font-size 4s ease-in-out;
+  }
+  
+  .social {
+    font-size: 2.5rem;
+    margin: 4px 10px 10px 10px;
+    color: white;
+  }
+  .social-link li a i:hover {
+    font-size: 4rem;
+    background-color: grey;
+    box-shadow: 0px 0px 10px 20px rgba(250, 100, 100, 0.8);
+    border-radius: 50%;
+  }
 /* /------!contact Me section-----------/
 
 
@@ -592,13 +626,13 @@ body {
 
 @media(max-width:768px) {
     html {
-        font-size: 45%;
+        font-size: 65%;
     }
 }
 
 @media(max-width:650px) {
     html {
-        font-size: 45%;
+        font-size: 65%;
     }
 
     .nav .menu {
