@@ -1,4 +1,27 @@
 AOS.init();
+function toggleaction() {
+            var action = document.querySelector('.action');
+            action.classList.toggle('active');
+        }
+var swiper = new Swiper('.swiper-container', {
+    effect: 'coverflow',
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: 'auto',
+    coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+    },
+
+    loop: true,
+    autoplay: {
+        delay: 1500,
+        disableOnInteraction: false,
+            }
+        });    
 var TxtType = function(el, toRotate, period) {
     this.toRotate = toRotate;
     this.el = el;
@@ -53,7 +76,6 @@ if (toRotate) {
 }   
 
 };
-
 
 
 var menu = document.querySelector('.menu');

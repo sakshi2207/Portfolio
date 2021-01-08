@@ -460,11 +460,68 @@ body {
     margin-top: 3rem;
 }
 
-/* /-------our education section---------/
+/* /-------our education section---------/*/
 
+/*----section 6 starts here------*/
+.sec6
+{
+    background: #fff;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 1.4rem;
+    color: #000;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background: #111;
+    flex-direction: column;
+    padding: 2rem;
+  }
+  .sec6 h2{
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 4rem;
+      padding-bottom: 2rem;
+      border-bottom: .3rem solid #ff6600;
+  }
+  .sec6 .swiper-container
+  {
+    width: 100%;
+    padding-top: 5rem;
+    padding-bottom: 20rem;
+  }
 
-/------contact Me section-----------/ */
-.sec6 {
+  .sec6 .swiper-slide
+  {
+    background-position: center;
+    background-size: cover;
+    width: 40rem;
+    height: 30rem;
+    background: #000;
+    -webkit-box-reflect: below .6rem linear-gradient(transparent,transparent,#0006);
+    text-align: center;
+
+  }
+  .sec6 .swiper-slide img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+  .sec6 .swiper-slide h1{
+      color: #fff;
+      font-size: 2rem;
+      text-transform: uppercase;
+  }
+  .sec6 .swiper-slide p{
+    color: #fff;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+  
+  
+/*/------contact Me section-----------/ */
+.sec7 {
     position: relative;
     height: auto;
     width: 100%;
@@ -476,17 +533,17 @@ body {
     background: #000;
 }
 
-.sec6 .head {
+.sec7 .head {
     color: #fff;
     font-size: 5rem;
 }
 
-.sec6 .info {
+.sec7 .info {
     color: #fff;
     font-size: 1.4rem;
 }
 
-.sec6 .container {
+.sec7 .container {
     display: flex;
     width: 90%;
     justify-content: space-evenly;
@@ -494,39 +551,39 @@ body {
     flex-wrap: wrap;
 }
 
-.sec6 .container .box {
+.sec7 .container .box {
     max-width: 50%;
     margin: 2rem;
     color: #fff;
 }
 
-.sec6 .container .box1 h2 {
+.sec7 .container .box1 h2 {
     font-size: 2rem;
 }
 
-.sec6 .container .box1 .book {
+.sec7 .container .box1 .book {
     margin: 2rem 0;
 }
 
-.sec6 .container .box1 .book .page1 i {
+.sec7 .container .box1 .book .page1 i {
     color: rgb(126, 158, 247);
     font-size: 2rem;
     margin-right: 1rem;
 }
 
-.sec6 .container .box1 .book .page1 span {
+.sec7 .container .box1 .book .page1 span {
     font-size: 2rem;
 }
 
-.sec6 .container .box1 .book .page2 {
+.sec7 .container .box1 .book .page2 {
     text-align: center;
 }
 
-.sec6 .container .box2 {
+.sec7 .container .box2 {
     width: 60rem;
 }
 
-.sec6 .container .box2 form {
+.sec7 .container .box2 form {
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
@@ -534,7 +591,7 @@ body {
     width: 100%;
 }
 
-.sec6 .container .box2 form input {
+.sec7 .container .box2 form input {
     width: 100%;
     height: 3rem;
     border: none;
@@ -545,11 +602,11 @@ body {
     color: #777;
 }
 
-.sec6 .container .box2 form .message {
+.sec7 .container .box2 form .message {
     height: 10rem;
 }
 
-.sec6 .container .box2 form button {
+.sec7 .container .box2 form button {
     outline: none;
     border: none;
     background: rgb(95, 121, 238);
@@ -557,35 +614,121 @@ body {
     padding: 2rem 3rem;
 }
 
-.sec6 .container .box2 form h2 {
+.sec7 .container .box2 form h2 {
     font-size: 2rem;
 }
-.social ul {
-    position: absolute;
-    left: 40%;
-    top: 70%;
-  }
-  
-.social li {
-    text-decoration: none;
-    display: inline;
-    font-size: 2rem;
-    text-align: center;
-    display: inline-block;
-    transition: background-color 4s ease-in-out, font-size 4s ease-in-out;
-  }
-  
-  .social {
-    font-size: 2.5rem;
-    margin: 4px 10px 10px 10px;
-    color: white;
-  }
-  .social-link li a i:hover {
-    font-size: 4rem;
-    background-color: grey;
-    box-shadow: 0px 0px 10px 20px rgba(250, 100, 100, 0.8);
+
+.action{
+    position: fixed;
+    bottom: 10%;
+    left: 5%;
+    height: 6rem;
+    width: 6rem;
     border-radius: 50%;
-  }
+    background: #fff;
+    box-shadow: 0 0rem 1rem #000;
+    z-index: 1000;
+    visibility: hidden;
+    display: none;
+    
+}
+.action span{
+    position: relative;
+    height: 100%;
+    transform: translateY(-.3rem);
+    width: 100%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    font-size: 5rem;
+    cursor: pointer;
+    transition: .5s;
+}
+.action.active span{
+    transform: rotateZ(-45deg)translateY(-.3rem);
+}
+.action ul{
+    position: absolute;
+    bottom: -7rem;
+    background: #fff;
+    max-width: 7rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+    border-radius: 3rem;
+    opacity: 0;
+    visibility: hidden;
+    box-shadow: 0 0 1rem #000;
+    transition: .5s;
+
+}
+.action.active ul{
+    bottom: 7rem;
+    opacity: 1;
+    visibility: visible;
+}
+.action ul li{
+    list-style-type: none;
+    padding-bottom: 1rem;
+    margin: 1.5rem 0;
+    cursor: pointer;
+    
+}
+.action ul li i{
+    color: #333;
+    font-size: 3rem;
+    transition: .5s;
+}
+.action ul li:hover i{
+    color: #7d91ff;
+}
+.action ul li:not(:last-child){
+    border-bottom: .1rem solid rgba(0,0,0,.3);
+}
+.social{
+    position: fixed;
+    bottom: 20%;
+    top:100%;
+    left: 5%;
+    z-index: 1000;
+    
+}
+.social ul{
+    background: #fff;
+    max-width: 7rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+    border-radius: 3rem;
+    box-shadow: 0 0 1rem #000;
+
+}
+
+.social ul li{
+    list-style-type: none;
+    padding-bottom: 1rem;
+    margin: 1.5rem 0;
+    cursor: pointer;
+    
+}
+.social ul li i{
+    color: #333;
+    font-size: 3rem;
+    transition: .5s;
+}
+.social ul li:hover i{
+    color: #7d91ff;
+    transform: scale(1.1);
+}
+.social ul li:not(:last-child){
+    border-bottom: .1rem solid rgba(0,0,0,.3);
+}
 /* /------!contact Me section-----------/
 
 
@@ -643,11 +786,11 @@ body {
         display: none;
     }
 
-    .sec6 .container {
+    .sec7 .container {
         flex-direction: column;
     }
 
-    .sec6 .container .box {
+    .sec7 .container .box {
         max-width: 100%;
     }
 
