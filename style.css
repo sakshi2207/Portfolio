@@ -983,3 +983,9 @@ body {
     padding: 1rem;
   }
 }
+
+.projectImg {
+  width: 50vw; 
+  height: auto; 
+}
+
