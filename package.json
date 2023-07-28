@@ -1,0 +1,25 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "firebase-admin": "^11.10.1",
+    "nodemailer": "^6.9.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sakshi2207/Portfolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sakshi2207/Portfolio/issues"
+  },
+  "homepage": "https://github.com/sakshi2207/Portfolio#readme"
+}
