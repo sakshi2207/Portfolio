@@ -171,3 +171,24 @@ function openGmailCompose() {
   // Open the mailto link.
   window.location.href = mailtoLink;
 }
+
+function isIOS() {
+  return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+}
+
+// Function to check if the user is on Android
+function isAndroid() {
+  return /Android/.test(navigator.userAgent);
+}
+
+// Set different href links based on the user agent
+var appLink = document.getElementById("appLink");
+if (isIOS()) {
+  appLink.href =
+    "https://apps.apple.com/us/app/joi-guide/id1615751629?ign-itscg=30200&ign-itsct=apps_box_badge";
+} else if (isAndroid()) {
+  appLink.href =
+    "https://play.google.com/store/apps/details?id=com.joiproject&hl=en_US&gl=US&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1";
+} else {
+  appLink.href = "https://www.joi.guide/";
+}
