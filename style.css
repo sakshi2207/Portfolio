@@ -261,7 +261,7 @@ body {
 
 .sec2 .container .content {
   max-width: 45%;
-  height: 40rem;
+  /* height: 40rem; */
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -410,27 +410,30 @@ body {
 .sec4 .container .box:hover img {
   transform: scale(1);
 }
-.container .box .information {
-  position: absolute;
-  bottom: 3rem;
+.container .box .overlay {
+  position: relative;
+  display: inline-block;
+  /* bottom: 3rem; */
 }
-.container .box .information h2 {
+
+.overlay h2 {
+  color: #000;
+  text-transform: uppercase;
+  font-size: 2rem;
+  letter-spacing: 0.3rem;
+  text-shadow: 0 0 0.5rem #333;
+  margin: 2rem 1rem 3.5rem 0;
+  text-align: center;
+  margin-top: 3rem;
+}
+.container .box .overlay a:hover {
   color: #fff;
+  background: rgba(0, 0, 0, 0.3);
   text-transform: uppercase;
   font-size: 2rem;
   text-shadow: 0 0 0.5rem #333;
-}
-.container .box .information h1 {
-  color: #fff;
-  text-transform: uppercase;
-  font-size: 3rem;
-  letter-spacing: 0.3rem;
-  text-shadow: 0 0 0.5rem #333;
-  margin: 2rem 0 3.5rem 0;
-}
-.container .box .information a:hover {
-  color: #fff;
-  background: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+
 }
 
 /* /----!our latest work section-----/
